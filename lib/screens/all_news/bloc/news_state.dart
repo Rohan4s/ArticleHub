@@ -1,8 +1,6 @@
-
-
 import 'package:equatable/equatable.dart';
+import 'package:test_project/models/local/news.dart';
 
-import '../model/news_model.dart';
 
 abstract class NewsState extends Equatable{
 
@@ -23,7 +21,7 @@ class NewsLoading extends NewsState{
 }
 class NewsLoaded extends NewsState{
 
-  List<NewsModel> newsList=[];
+  List<News> newsList=[];
   NewsLoaded({required this.newsList});
   @override
   // TODO: implement props
@@ -39,7 +37,7 @@ class NewsError extends NewsState{
 }
 
 class NewsSearch extends NewsState{
-  List<NewsModel> newsList = [];
+  List<News> newsList = [];
   NewsSearch({required this.newsList});
   @override
   // TODO: implement props

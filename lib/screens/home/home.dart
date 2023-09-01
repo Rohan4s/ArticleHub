@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:test_project/pages/apple_news.dart';
 
+import '../all_news/all_news.dart';
+
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
 

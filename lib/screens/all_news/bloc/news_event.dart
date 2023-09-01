@@ -1,7 +1,7 @@
 
 import 'package:equatable/equatable.dart';
 
-import '../model/news_model.dart';
+import 'package:test_project/models/local/news.dart';
 
 abstract class NewsEvent extends Equatable{
 
@@ -19,7 +19,7 @@ class GetAllNews extends NewsEvent{
 class GetSearchedNews extends NewsEvent{
 
   String query,newsType;
-  List<NewsModel> newsList=[];
+  List<News> newsList=[];
   GetSearchedNews({required this.query,required this.newsList,required this.newsType});
   @override
   // TODO: implement props

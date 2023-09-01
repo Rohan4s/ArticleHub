@@ -1,13 +1,14 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:test_project/bloc/news_event.dart';
-import 'package:test_project/bloc/news_state.dart';
 import 'package:test_project/helper/news_helper.dart';
-import 'package:test_project/model/news_model.dart';
+import 'package:test_project/models/local/news.dart';
 import 'package:test_project/service/api_service.dart';
 
+import 'news_event.dart';
+import 'news_state.dart';
+
 class NewsBloc extends Bloc<NewsEvent, NewsState> {
-  List<NewsModel> newsList = [];
+  List<News> newsList = [];
 
   NewsBloc() : super(NewsInit()) {
 
